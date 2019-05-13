@@ -8,8 +8,8 @@
 
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <script async custom-element="amp-story"
-        src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+        <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+        <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
         <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
 
@@ -26,7 +26,7 @@
                 font-size: 2.875em;
                 font-weight: normal;
                 line-height: 1.174;
-                text-shadow: 0 0 4px #000;
+                text-shadow: 2px 2px 4px #000;
             }
             p {
                 font-weight: normal;
@@ -58,6 +58,18 @@
                 background-color: #000;
                 line-height: 2em;
             }
+
+            .gradient {
+                background-image: linear-gradient(#000, transparent 15%, transparent 70%, #000);
+            }
+
+            .gradient.blue {
+                background-image: linear-gradient(transparent, transparent 50%, #003264);
+            }
+
+            .gradient.red {
+                background-image: linear-gradient(transparent, transparent 50%, #f00);
+            }
         </style>
     </head>
     <body>
@@ -70,27 +82,228 @@
 
             <amp-story-page id="cover">
                 <amp-story-grid-layer template="fill">
-                    <amp-img src="assets/kamala-harris-vertical.jpg"
-                        width="720" height="1280"
-                        layout="responsive">
+                    <amp-img src="assets/cover.jpg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                        animate-in="pan-right"
+                        animate-in-duration="5s">
                     </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient red"></div>
                 </amp-story-grid-layer>
                 <amp-story-grid-layer template="vertical" class="bottom">
                     <h1>2020 Democrat Presidential Candidates</h1>
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <!-- Page 1: 1 layer (vertical) -->
+            <!-- Page 1: Michael Bennet -->
+            <amp-story-page id="michael-bennet">
+                <amp-story-grid-layer template="fill">
+                    </amp-img>
+                    <amp-img
+                        src="assets/michael-bennet.jpg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                        animate-in="fade-in"
+                        animate-in-duration="1s">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                    <h1>Michael Bennet</h1>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <q>"I think one of the things that we are facing right now is that we've stopped listening to each other in our politics."</q>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 2: Joe Biden -->
+            <amp-story-page id="michael-bennet-info">
+                <amp-story-grid-layer template="vertical">
+                    <div animate-in="fade-in" animate-in-duration="1s">
+                        <p>Bennet may be best-known outside his state for his January 2019 excoriation of Ted Cruz in Congress, where he criticized the Texas Republican senator’s "crocodile tears" during the national government shutdown, noting that Cruz pushed a shutdown in 2013 when Colorado was "under water." The two-term senator is credited with helping Democrats pass the Affordable Care Act, and has been speaking out against Trump's attacks on the bill.</p>
+                        <p><strong>Age:</strong> 54 <br />
+                        <strong>Years in politics:</strong> 10</p>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 1: Joe Biden -->
+            <amp-story-page id="joe-biden">
+                <amp-story-grid-layer template="fill">
+                    </amp-img>
+                    <amp-img
+                        src="assets/joe-biden.jpg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                        animate-in="fade-in"
+                        animate-in-duration="1s">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                    <h1>Joe Biden</h1>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <q>"Fighting corruption is not just good governance. It's self-defense. It's patriotism."</q>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 2: Joe Biden -->
+            <amp-story-page id="joe-biden-info">
+                <amp-story-grid-layer template="vertical">
+                    <div animate-in="fade-in" animate-in-duration="1s">
+                        <p>Biden, who entered the 2020 race officially with a campaign video April 25, already leads in the polls. Obama’s vice president and right-hand man, Biden has additional decades of federal experience as a senator from Delaware and a centrist appeal that could sway moderate Republicans and independents. Now leads Penn Biden Center for Diplomacy and Global Engagement at University of Pennsylvania.</p>
+                        <p><strong>Age:</strong> 76 <br />
+                        <strong>Years in politics:</strong> 49</p>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- video/ad/etc -->
+            <amp-story-page id="video01">
+                <amp-story-grid-layer template="fill">
+                    <amp-video autoplay loop
+                        width="720" height="1280"
+                        poster="assets/liberwoman.jpg"
+                        layout="responsive">
+                        <source src="assets/liberwoman.mp4" type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient blue"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <h1>Your Vote Counts</h1>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 1: Cory Booker -->
             <amp-story-page id="cory-booker">
                 <amp-story-grid-layer template="fill">
-                    <amp-img src="assets/cory-booker-vertical.jpg" width="720" height="1280" layout="responsive">
                     </amp-img>
+                    <amp-img
+                        src="assets/cory-booker.jpg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                        animate-in="fade-in"
+                        animate-in-duration="1s">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient"></div>
                 </amp-story-grid-layer>
                 <amp-story-grid-layer template="vertical">
                     <h1>Cory Booker</h1>
                 </amp-story-grid-layer>
                 <amp-story-grid-layer template="vertical" class="bottom">
-                    <q>The greatest natural resource our country has is not oil. It's not gas. It's not coal. It's the genius of our children.</q>
+                    <q>"The greatest natural resource our country has is not oil. It's not gas. It's not coal. It's the genius of our children."</q>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 2: Cory Booker -->
+            <amp-story-page id="cory-booker-info">
+                <amp-story-grid-layer template="vertical">
+                    <div animate-in="fade-in" animate-in-duration="1s">
+                        <p>The former Newark, New Jersey mayor launched his campaign with an appeal to America’s common purpose and a focus on social and racial equality on Feb. 1, 2019. A Rhodes Scholar and Yale Law graduate who gained celebrity-politician status thanks to his early use of social media. The US senator from New Jersey has been criticized for being close to wealthy elites and for media-friendly stunts.</p>
+                        <p><strong>Age:</strong> 49 <br />
+                        <strong>Years in politics:</strong> 17</p>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 1: Pete Buttigieg -->
+            <amp-story-page id="pete-buttigieg">
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        src="assets/pete-buttigieg.jpg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                        animate-in="fade-in"
+                        animate-in-duration="1s">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                    <h1>Pete Buttigieg</h1>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <q>"The only way to know is to get out there," he said to CNN. "I will say I got re-elected with 80% of the vote after I had come out while Mike Pence was governor of Indiana. I don't think these things decide your fate."</q>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 2: Pete Buttigieg -->
+            <amp-story-page id="pete-buttigieg-info">
+                <amp-story-grid-layer template="vertical">
+                    <div animate-in="fade-in" animate-in-duration="2s">
+                        <p>A gay Democratic mayor in South Bend, which is a conservative, Republican stronghold, Buttigieg presented a progressive message geared towards millennials in a Jan. 23 exploratory announcement, saying we "can't look for greatness in the past." His LGBTQ, Harvard- and Oxford-educated profile may appeal to coastal elites and his midwest roots may give him an advantage in the rest of the country.</p>
+                        <p><strong>Age:</strong> 37 <br />
+                        <strong>Years in politics:</strong> 17</p>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- video/ad/etc -->
+            <amp-story-page id="video02">
+                <amp-story-grid-layer template="fill">
+                    <amp-video autoplay loop
+                        width="720" height="1280"
+                        poster="assets/liberwoman.jpg"
+                        layout="responsive">
+                        <source src="assets/liberwoman.mp4" type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient blue"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <h1>Your Vote Counts</h1>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 1: Julián Castro -->
+            <amp-story-page id="julian-castro">
+                <amp-story-grid-layer template="fill">
+                    <amp-img
+                        src="assets/julian-castro.jpg"
+                        width="720"
+                        height="1280"
+                        layout="responsive"
+                        animate-in="fade-in"
+                        animate-in-duration="1s">
+                    </amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                    <h1>Julián Castro</h1>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <q>"The destiny of the Latino community is interwoven with the destiny of the United States."</q>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- Page 2: Julián Castro -->
+            <amp-story-page id="julian-castro-info">
+                <amp-story-grid-layer template="vertical">
+                    <div animate-in="fade-in" animate-in-duration="2s">
+                        <p>After growing up in a poor San Antonio neighborhood, Castro—and twin brother Joaquín—went on to earn Ivy League degrees and take on careers in national politics. Onetime mayor of San Antonio, Castro was US secretary of housing and urban development under Barack Obama. That experience, along with his mother’s activism with Latino groups, is a central part of the narrative he’s pitching to voters. He entered the race on Jan. 12, 2019.</p>
+                        <p><strong>Age:</strong> 44 <br />
+                        <strong>Years in politics:</strong> 18</p>
+                    </div>
                 </amp-story-grid-layer>
             </amp-story-page>
 

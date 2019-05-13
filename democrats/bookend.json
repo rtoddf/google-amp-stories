@@ -11,6 +11,24 @@
       "text": "More about 2020 Democrat Presidential Candidates"
     },
     {
+      "type": "small",
+      "title": "Michael Bennet - Twitter",
+      "url": "https://twitter.com/MichaelBennet",
+      "image": "assets/michael-bennet.jpg"
+    },
+    {
+      "type": "small",
+      "title": "Joe Biden - Twitter",
+      "url": "https://twitter.com/JoeBiden",
+      "image": "assets/joe-biden.jpg"
+    },
+    {
+      "type": "small",
+      "title": "Cory Booker - Twitter",
+      "url": "https://twitter.com/CoryBooker",
+      "image": "assets/cory-booker.jpg"
+    },
+    {
       "type": "cta-link",
       "links": [
         {
