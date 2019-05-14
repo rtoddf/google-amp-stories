@@ -48,7 +48,7 @@
             amp-story-grid-layer.center-text {
                 align-content: center;
             }
-            .wrapper {
+            /* .wrapper {
                 display: grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 50% 50%;
@@ -57,6 +57,14 @@
                 text-align: center;
                 background-color: #000;
                 line-height: 2em;
+            } */
+
+            .background.light {
+                background: #dedede;
+            }
+
+            .background.dark {
+                background: #666;
             }
 
             .gradient {
@@ -166,6 +174,18 @@
                         <strong>Years in politics:</strong> 49</p>
                     </div>
                 </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- tweet -->
+            <amp-story-page id="tweet-biden">
+                <amp-story-grid-layer template="fill">
+                    <div class="background dark"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="thirds">
+                    <amp-twitter grid-area="upper-third" width="375" height="472" layout="responsive" data-tweetid="1128035443918954496">
+                    </amp-twitter>
+                </amp-story-grid-layer>
+                
             </amp-story-page>
 
             <!-- video/ad/etc -->
@@ -307,13 +327,49 @@
                 </amp-story-grid-layer>
             </amp-story-page>
 
-            <!-- Page 5 -->
-            <!-- <amp-story-page id="tweet">
+            <!-- Page 1: Tulsi Gabbard -->
+            <amp-story-page id="tulsi-gabbard">
                 <amp-story-grid-layer template="fill">
-                    <amp-twitter width="375" height="472" layout="responsive" data-tweetid="1125384215497990144">
-                    </amp-twitter>
+                    <amp-img src="assets/tulsi-gabbard.jpg" width="720" height="1280" layout="responsive" animate-in="fade-in"
+                        animate-in-duration="1s">
+                    </amp-img>
                 </amp-story-grid-layer>
-            </amp-story-page> -->
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                    <h1>Tulsi Gabbard</h1>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <q>"These days, it's often women in uniform - moms, wives, even grandmothers - who deploy and leave their families behind.</q>
+                </amp-story-grid-layer>
+            </amp-story-page>
+            
+            <!-- Page 2: Tulsi Gabbard -->
+            <amp-story-page id="tulsi-gabbard-info">
+                <amp-story-grid-layer template="vertical">
+                    <div animate-in="fade-in" animate-in-duration="2s">
+                        <p>The first Hindu member of Congress, the Hawaii representative controversially met with Syrian leader Bashar al-Assad and sided with Russian president Vladimir Putin against Obama on US intervention in Syria. A onetime Hawaii state representative, she supported Bernie Sanders’ 2016 Democratic primary campaign. On Feb. 2 she entered the race she calls a “fight for the soul” of America.</p>
+                        <p><strong>Age:</strong> 37 <br />
+                            <strong>Years in politics:</strong> 17</p>
+                    </div>
+                </amp-story-grid-layer>
+            </amp-story-page>
+
+            <!-- video/ad/etc -->
+            <amp-story-page id="video03">
+                <amp-story-grid-layer template="fill">
+                    <amp-video autoplay loop width="720" height="1280" poster="assets/liberwoman.jpg" layout="responsive">
+                        <source src="assets/liberwoman.mp4" type="video/mp4">
+                    </amp-video>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="fill">
+                    <div class="gradient blue"></div>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical" class="bottom">
+                    <h1>Your Vote Counts</h1>
+                </amp-story-grid-layer>
+            </amp-story-page>
 
             <!-- Page 5 (Collage): 2 layers + animations -->
             <!-- <amp-story-page id="page5">
